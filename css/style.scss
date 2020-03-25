@@ -1,0 +1,208 @@
+$mobileView: "only screen and (max-width : 600px)";
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+
+    header {
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: justify;
+                justify-content: space-between;
+        padding: 20px;
+
+        a {
+            cursor: default;
+
+            #info {
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                text-align: center;
+                line-height: 30px;
+                background: #fff;
+                font-size: 14px;
+                box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
+                cursor: pointer;
+                color: #888;
+
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+
+        #switch {
+
+            input[type=checkbox] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+
+                .toggleTrack {
+                    display: block;
+                    height: 30px;
+                    width: 150px;
+                    background: #ddd;
+                    border-radius: 20px;
+                    position: relative;
+
+                    &:before {
+                        content: '';
+                        height: 30px;
+                        width: 75px;
+                        background: #fff;
+                        box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+                        border-radius: 20px;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        -webkit-transition: right .2s ease-in;
+                        transition: right .2s ease-in;
+                    }
+
+                    span {
+                        color: #444;
+                        font-size: 15px;
+                        line-height: 30px;
+                        position: absolute;
+                        width: 75px;
+                        text-align: center;
+
+                        &:first-child {
+                            left: 0;
+                        }
+
+                        &:last-child {
+                            right: 0;
+                        }
+                    }
+                }
+            }
+
+            input[type="checkbox"]:checked+label .toggleTrack:before {
+                right: 75px;
+                background: #666;
+                color: #fff;
+            }
+
+        }
+    }
+
+    main {
+        #chooseTimer {
+            width: 510px;
+            height: 50px;
+            display: block;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+            border-radius: 5px;
+            margin-top: 60px;
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                    align-items: center;
+            color: #444;
+            cursor: pointer;
+
+            @media #{$mobileView} {
+                width: 300px;
+                height: 40px;
+                font-size: 14px;
+            }
+
+            .targetTimer {
+                width: 170px;
+                height: 50px;
+                border-radius: 5px;
+                display: block;
+                line-height: 50px;
+                text-align: center;
+
+                &:hover {
+                    background: rgba(150, 150, 150, 0.15);
+                }
+
+                @media #{$mobileView} {
+                    width: 100px;
+                    height: 40px;
+                    line-height: 40px;
+                }
+            }
+
+            .activeTimer {
+                background-color: #666;
+                color: #eee;
+
+                &:hover {
+                    background-color: #666;
+                }
+            }
+        }
+
+        #timer {
+            font-size: 9rem;
+            color: #444;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+
+            @media #{$mobileView} {
+                font-size: 7rem;
+                top: 55%;
+            }
+        }
+
+        #buttons {
+            button {
+                background: rgba(0, 0, 0, 0);
+                border: none;
+                position: absolute;
+                -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                color: #888;
+                cursor: pointer;
+            }
+
+            #reset {
+                font-size: 38px;
+                bottom: 75.5px;
+                left: 40%;
+                left: calc(50% - 115px);
+                padding: 0px;
+                display: none;
+
+                @media #{$mobileView} {
+                    font-size: 30px;
+                    bottom: 46px;
+                    left: 25%;
+                    left: calc(50% - 90px);
+                }
+            }
+
+            #start {
+                font-size: 40px;
+                bottom: 40px;
+                left: 50%;
+                width: 80px;
+                height: 80px;
+                padding-left: 13px;
+                border-radius: 50%;
+                box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.7);
+
+                @media #{$mobileView} {
+                    font-size: 35px;
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}

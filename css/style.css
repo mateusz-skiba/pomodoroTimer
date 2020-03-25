@@ -1,0 +1,218 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Roboto', sans-serif;
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 20px;
+}
+
+body header a {
+  cursor: default;
+}
+
+body header a #info {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #fff;
+  font-size: 14px;
+  -webkit-box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: #888;
+}
+
+body header a #info:hover {
+  color: #333;
+}
+
+body header #switch input[type=checkbox] {
+  display: none;
+}
+
+body header #switch label {
+  cursor: pointer;
+}
+
+body header #switch label .toggleTrack {
+  display: block;
+  height: 30px;
+  width: 150px;
+  background: #ddd;
+  border-radius: 20px;
+  position: relative;
+}
+
+body header #switch label .toggleTrack:before {
+  content: '';
+  height: 30px;
+  width: 75px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: right .2s ease-in;
+  transition: right .2s ease-in;
+}
+
+body header #switch label .toggleTrack span {
+  color: #444;
+  font-size: 15px;
+  line-height: 30px;
+  position: absolute;
+  width: 75px;
+  text-align: center;
+}
+
+body header #switch label .toggleTrack span:first-child {
+  left: 0;
+}
+
+body header #switch label .toggleTrack span:last-child {
+  right: 0;
+}
+
+body header #switch input[type="checkbox"]:checked + label .toggleTrack:before {
+  right: 75px;
+  background: #666;
+  color: #fff;
+}
+
+body main #chooseTimer {
+  width: 510px;
+  height: 50px;
+  display: block;
+  margin: auto;
+  background: #fff;
+  -webkit-box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 6px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+  margin-top: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #444;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  body main #chooseTimer {
+    width: 300px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+body main #chooseTimer .targetTimer {
+  width: 170px;
+  height: 50px;
+  border-radius: 5px;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+}
+
+body main #chooseTimer .targetTimer:hover {
+  background: rgba(150, 150, 150, 0.15);
+}
+
+@media only screen and (max-width: 600px) {
+  body main #chooseTimer .targetTimer {
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+body main #chooseTimer .activeTimer {
+  background-color: #666;
+  color: #eee;
+}
+
+body main #chooseTimer .activeTimer:hover {
+  background-color: #666;
+}
+
+body main #timer {
+  font-size: 9rem;
+  color: #444;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  body main #timer {
+    font-size: 7rem;
+    top: 55%;
+  }
+}
+
+body main #buttons button {
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #888;
+  cursor: pointer;
+}
+
+body main #buttons #reset {
+  font-size: 38px;
+  bottom: 75.5px;
+  left: 40%;
+  left: calc(50% - 115px);
+  padding: 0px;
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body main #buttons #reset {
+    font-size: 30px;
+    bottom: 46px;
+    left: 25%;
+    left: calc(50% - 90px);
+  }
+}
+
+body main #buttons #start {
+  font-size: 40px;
+  bottom: 40px;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  padding-left: 13px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 9px 0px rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 600px) {
+  body main #buttons #start {
+    font-size: 35px;
+    bottom: 0px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
