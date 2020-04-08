@@ -111,13 +111,20 @@ const resetTimer = () => {
   start.innerHTML = '<i class="fas fa-play"></i>';
   start.style.paddingLeft = "13px";
   activeTimer = false;
-
+  
   if (choice == timers[0]) {
     timer.textContent = "25:00";
+    time = 25.00;
   } else if (choice == timers[1]) {
     timer.textContent = "05:00";
+    time = 5.00;
   } else if (choice == timers[2]) {
     timer.textContent = "15:00";
+    time = 15.00;
+  }
+  else {
+    timer.textContent = "25:00";
+    time = 25.00;
   }
 }
 
